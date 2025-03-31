@@ -1,0 +1,16 @@
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+.navbar-nav .dropdown-menu {
+  background: #f8f9fa;
+}
+
+.btn-danger {
+  margin-left: 10px;
+}

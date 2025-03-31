@@ -1,0 +1,134 @@
+.visitor-navbar {
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #00bcd4;
+}
+
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+}
+
+.nav-submenu.show {
+    display: block;
+}
+
+.nav-submenu li {
+    list-style: none;
+}
+
+.nav-submenu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-submenu a:hover {
+    background-color: #444;
+    color: #00bcd4;
+}
+
+/* Design responsive */
+@media (max-width: 768px) {
+    .visitor-navbar {
+        position: static;
+        top: auto;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 0.2rem 0;
+    }
+
+    .nav-submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+
+    .nav-submenu.show {
+        display: block;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .nav-submenu a {
+        padding-left: 2rem;
+        text-align: center;
+    }
+}
